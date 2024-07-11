@@ -1,0 +1,105 @@
+/* colors and fonts */
+:root {
+    /* fonts */
+    --mono: 'Courier New', monospace;
+    --main: 'Arial', sans-serif;
+    
+    /* base colors */
+    --background-light: #1E1E1E; /* Dark background color for contrast */
+    --background-dark: #0A0A0A; /* Main text color (light) */
+
+    /* font colors */
+    --font-light: #E0E0E0; /* Light font color */
+    --font-dark: #141414; /* Dark font color */
+
+    /* accent colors */
+    --accent-1: #383838; /* Subtle dark gray for borders and backgrounds */
+    --accent-2: #505050; /* Neutral gray for secondary text and elements */
+    --accent-3: #707070; /* Darker gray for emphasis */
+    
+    /* highlight colors */
+    --highlight-1: #00AEEF; /* Bright cyan for links and highlights */
+    --highlight-2: #FF6F61; /* Vivid coral for buttons and accents */
+
+    /* specific elements */
+    --logo-color: #00AEEF; /* Logo color */
+    --button-color: #FF6F61; /* Button color */
+    --gradient-border-start: #00AEEF; /* Start of gradient border */
+    --gradient-border-end: #FF6F61; /* End of gradient border */
+    --footer-bg: #383838; /* Footer background color */
+    --footer-icon: #FF4F4F; /* Footer icon color, slightly darker than buttons */
+}
+
+/* MOBILE FIRST DESIGN */
+/* breadcrumb */
+.breadcrumb {
+    /* add variable */
+    font-family: serif;
+}
+.breadcrumb ul {
+    list-style: none;
+}
+.breadcrumb li {
+    text-decoration: none;
+}
+
+/* nav */
+nav ul {
+    list-style: none;
+    flex-direction: column;
+    font-family: monospace;
+    }
+
+/* hero section */
+.hero-section {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: center;
+    padding-left: 1rem;
+}
+.hero-section p {
+    font-size: 1.2rem;
+}
+/* card wrapper */
+.card-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+/* cards */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+}
+.card h4 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+.card img {
+    width: 100%;
+}
+
+
+
+
+	/* h1, h2, h3, body for fonts */
+	/* header is a grid with two children, double border on bottom */
+	/* div for h1, h2, and logo is grid */
+	/* Nav ul display flex text-decoration none */
+	/* buttons */
+	/* footer */
+
+/* media queries  */
+@media (min-width: 650px) {
+    .card-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .hero-section {
+        padding-left: 7rem ;
+    }
+}
+/* @ min-width 900 px */
+
