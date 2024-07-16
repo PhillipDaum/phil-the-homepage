@@ -31,28 +31,60 @@
 }
 
 /* MOBILE FIRST DESIGN */
+body {
+    border: 0;
+    margin: 0;
+}
+/* top bar */
+.top-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
 /* breadcrumb */
 .breadcrumb {
     /* add variable */
-    font-family: serif;
+    font-family: var(--main);
 }
 .breadcrumb ul {
     list-style: none;
+    display: flex;
+    flex-direction: row;
 }
 .breadcrumb li {
     text-decoration: none;
 }
+.breadcrumb li p {
+    margin-top: -.1rem;
+    font-size: 1.2rem;
+    padding-left: .5rem;
+}
+
+/* gradient borders */
+section {
+    border-top: .3rem solid transparent;
+    border-image: linear-gradient(45deg, var(--gradient-border-start),var(--gradient-border-end));
+    border-image-slice: 1;
+}
 
 /* nav */
 nav ul {
-    list-style: none;
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding-right: 1rem;
     font-family: monospace;
+    list-style: none;
     }
+nav li a {
+    text-decoration: none;
+    color: var(--font-dark);
+}
 
 /* hero section */
 .hero-section {
-    height: 50vh;
+    height: 30vh;
     display: flex;
     flex-direction: column;
     align-content: flex-start;
@@ -61,6 +93,15 @@ nav ul {
 }
 .hero-section p {
     font-size: 1.2rem;
+}
+
+/* projects section */
+.projects-section {
+    padding: .5rem;
+}
+.projects-section h3 {
+    text-align: center;
+    font-size: 1.4rem;
 }
 /* card wrapper */
 .card-wrapper {
@@ -75,7 +116,7 @@ nav ul {
     width: 90%;
 }
 .card h4 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: center;
 }
 .card img {
@@ -83,14 +124,9 @@ nav ul {
 }
 
 
+/* buttons */
 
-
-	/* h1, h2, h3, body for fonts */
-	/* header is a grid with two children, double border on bottom */
-	/* div for h1, h2, and logo is grid */
-	/* Nav ul display flex text-decoration none */
-	/* buttons */
-	/* footer */
+/* footer */
 
 /* media queries  */
 @media (min-width: 650px) {

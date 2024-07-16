@@ -1,47 +1,82 @@
-<!-- html:5  -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>phil</title>
-   <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>phil</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-   <!-- make this like a breadcrumb -->
-   <i class="fa-solid fa-code"></i>
-   <h1>Phil Daum</h1>
-<!-- nav  -->
-   <ul>
-       <li>projects</li>
-       <li>about</li>
-       <li>javascript</li>
-       <li>contact</li>
-   </ul>
-<section class="hero-section"></section>
-   <p class="hero-thing"></p>
-   <h1>Phil Daum</h1>
-   <h2>coding the web</h2>
-<section class="projects-section"></section>
-<section class="contact-section"></section>
-<!-- main  -->
-   <!-- maybe a hero section, maybe something else  -->
-   <!-- add some content here and write out notes and stuff  -->
-       <!-- maybe an h2?  -->
-           <!-- div with 3 cards links to grid @ media quieres -->
-               <!-- card -->
-                   <!-- picture, title, paragraph, button - in a row -->
-               <!-- card -->
-                   <!-- picture, title, paragraph, button - in a row -->
-               <!-- card -->
-                   <!-- picture, title, paragraph, button - in a row -->
-<!-- footer -->
-<footer></footer>
-   <!-- what sort of footer  -->
+    <div class="top-bar">
+        <!-- make this like a breadcrumb -->
+        <div class="breadcrumb">
+            <ul>
+                <li>
+                    <i class="fa-solid fa-code"></i>
+                </li>
+                <li>
+                    <p>Phil Daum</p>
+                </li>
+                <!-- javascript will add a "/" then the name of the next page -->
+                <!-- could add more for parts of page -->
+            </ul>
+        </div>
+        <!-- nav  -->
+        <nav>
+            <ul>
+                <!-- FIX THE LINK -->
+                <li><a href="#">projects</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="javascript.html">javascript</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- main  -->
+    <section class="hero-form">
+        <!-- contact -->
+        <div class="contact-wrapper">
+            <h3>What's up!</h3>
+            <div class="form-wrapper">
+                <p>*required</p>
+                <form action="">
+                    <fieldset class="user-info">
+                        <div class="name-and-email">
+                            <label for="name">Name*:</label>
+                            <input type="text" id="name" name="name" minlength="1" maxlength="25" required>
+                        </div>
+                        <div class="name-and-email">
+                            <label for="email">Email*:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <label for="comment">Comment</label>
+                        <!-- set size with rows and cols -->
+                        <div>
+                            <textarea class="comment-area" name="comment" id="comment" rows="3" cols=""></textarea>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <input type="submit" value="submit" class="submit-button">
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </section>
 
-<script src="js/custom.js"></script>
-<script src="data/data.js"></script>
-<!-- font awesome -->
-<script src="https://kit.fontawesome.com/0544cb5778.js" crossorigin="anonymous"></script>
+    <!-- footer -->
+    <section>
+        <footer>
+            <div>
+                <!-- my name, developert -->
+                <!-- social links -->
+                <p>&copy; Phil Daum. All Rights reserved</p>
+            </div>
+        </footer>
+    </section>
+    <script src="js/custom.js" type="module"></script>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/0544cb5778.js" crossorigin="anonymous"></script>
 </body>
 </html>

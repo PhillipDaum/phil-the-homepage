@@ -1,35 +1,37 @@
-<!-- html:5  -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>phil</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <!-- make this like a breadcrumb -->
-    <div class="breadcrumb">
-        <ul>
-            <li>
-                <i class="fa-solid fa-code"></i>
-            </li>
-            <li>
-                <h1>Phil Daum</h1>
-            </li>
-            <!-- javascript will add a "/" then the name of the next page -->
-            <!-- could add more for parts of page -->
-        </ul>
+    <div class="top-bar">
+        <!-- make this like a breadcrumb -->
+        <div class="breadcrumb">
+            <ul>
+                <li>
+                    <i class="fa-solid fa-code"></i>
+                </li>
+                <li>
+                    <p>Phil Daum</p>
+                </li>
+                <!-- javascript will add a "/" then the name of the next page -->
+                <!-- could add more for parts of page -->
+            </ul>
+        </div>
+        <!-- nav  -->
+        <nav>
+            <ul>
+                <!-- FIX THE LINK -->
+                <li><a href="#">projects</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="javascript.html">javascript</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </nav>
     </div>
-    <!-- nav  -->
-    <ul>
-        <li>projects</li>
-        <li>about</li>
-        <li>javascript</li>
-        <li>contact</li>
-    </ul>
     <!-- main  -->
     <section class="hero-section">
         <p>Hi, my name is</p>
@@ -37,22 +39,28 @@
         <h2>I am coding the web</h2>
     </section>
     <section class="projects-section">
+        <h3>Projects</h3>
         <div class="card-wrapper">
         </div>
     </section>
 
     <section class="contact-section">
+        <p>contact me yo</p>
         <!-- little contact section with button -->
     </section>
 
     <!-- footer -->
-    <footer>
-        <!-- what sort of footer  -->
-    </footer>
-
+    <section>
+        <footer>
+            <div>
+                <!-- my name, developert -->
+                <!-- social links -->
+                <p>&copy; Phil Daum. All Rights reserved</p>
+            </div>
+        </footer>
+    </section>
     <script src="js/custom.js" type="module"></script>
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/0544cb5778.js" crossorigin="anonymous"></script>
 </body>
-
 </html>
