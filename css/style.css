@@ -5,8 +5,8 @@
     --main: 'Arial', sans-serif;
     
     /* base colors */
-    --background-light: #1E1E1E; /* Dark background color for contrast */
-    --background-dark: #0A0A0A; /* Main text color (light) */
+    --background-light: #ada4a4;
+    --background-dark: #0A0A0A; 
 
     /* font colors */
     --font-light: #E0E0E0; /* Light font color */
@@ -34,13 +34,15 @@
 body {
     border: 0;
     margin: 0;
+    background-color: var(--background-light);
 }
-/* top bar */
-.top-bar{
+/* header */
+.header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
+    /* header height - see nav that pops out */
+    height: 4rem;
 }
 /* breadcrumb */
 .breadcrumb {
@@ -61,35 +63,66 @@ body {
     padding-left: .5rem;
 }
 
-/* gradient borders */
-section {
-    border-top: .3rem solid transparent;
-    border-image: linear-gradient(45deg, var(--gradient-border-start),var(--gradient-border-end));
-    border-image-slice: 1;
-}
-
 /* nav */
 nav ul {
-    display: flex;
-    flex-direction: row;
+    display: none;
     gap: 1rem;
-    padding-right: 1rem;
     font-family: monospace;
     list-style: none;
+    margin: 0;
+    position: absolute;
+    right: -100%;
+    padding: 0;
+    /* different value */ 
     }
 nav li a {
     text-decoration: none;
     color: var(--font-dark);
 }
+.nav-active {
+    right: 0;
+    display: flex;
+    padding-left: 1.5rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    justify-content: space-around;
+    height: 100vh;
+    height: calc(100% - 4rem);
+    width: 50%;
+    transition: all 400ms;
+    background-color: var(--background-light);
+    top: 4rem;
+  }
+/* hamburger button */
+.burger {
+	/* tweak */
+	padding: .3rem;
+	margin: 1rem;
+  } 
+/* sizing for font awesome burger button */
+.burger i {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* gradient borders */
+section {
+    border-top: .2rem solid transparent;
+    border-image: linear-gradient(45deg, var(--gradient-border-start),var(--gradient-border-end));
+    border-image-slice: 1;
+}
 
 /* hero section */
 .hero-section {
+    /* is good for mobile */
     height: 30vh;
     display: flex;
     flex-direction: column;
     align-content: flex-start;
     justify-content: center;
     padding-left: 1rem;
+    background-color: var(--background-dark);
+    color: var(--font-light);
 }
 .hero-section p {
     font-size: 1.2rem;
@@ -121,20 +154,55 @@ nav li a {
 }
 .card img {
     width: 100%;
+    border-radius: .2rem;
 }
-
 
 /* buttons */
 
 /* footer */
+footer div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: .4rem;
+}
+footer div .socials {
+    cursor: pointer;
+    display: flex;
+    font-size: 1.5rem;
+    flex-direction: row;
+    gap: .75rem;
+}
+footer div .socials i {
+    color: var(--footer-icon);
+} 
 
 /* media queries  */
 @media (min-width: 650px) {
     .card-wrapper {
         grid-template-columns: repeat(3, 1fr);
     }
+    nav {
+        flex-direction: row;
+        padding-right: 1rem;
+    }
     .hero-section {
         padding-left: 7rem ;
+    }
+    .burger {
+        display: none;
+    }
+    /* Push down */
+    nav ul {
+        display: flex;
+        right: revert;
+        flex-direction: row;
+        position: revert;
+    }
+    nav a:hover {
+        /* CHANGE COLOR */
+        border-bottom: red solid 1rem;
+        cursor: pointer;
     }
 }
 /* @ min-width 900 px */

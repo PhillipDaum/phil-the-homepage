@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>phil</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.6.0/css/all.css">
+    <!-- <script src="https://kit.fontawesome.com/0544cb5778.js" crossorigin="anonymous"></script> -->
 </head>
+
 <body>
-    <div class="top-bar">
-        <!-- make this like a breadcrumb -->
+    <div class="header">
         <div class="breadcrumb">
             <ul>
                 <li>
-                    <i class="fa-solid fa-code"></i>
+                    <i class="fa fa-solid fa-code"></i>
                 </li>
                 <li>
                     <p>Phil Daum</p>
                 </li>
-                <!-- javascript will add a "/" then the name of the next page -->
-                <!-- could add more for parts of page -->
             </ul>
         </div>
         <!-- nav  -->
-         <!-- hamurger menu -->
-         <div class="burger">
-            <button onclick="showHamburger()">
+        <!-- hamurger menu -->
+        <div class="burger">
+            <button class="burger-button">
                 <i class="fa fa-bars"></i>
             </button>
         </div>
         <nav>
             <ul class="nav">
                 <!-- FIX THE LINK -->
-                <li><a href="#">projects</a></li>
+                <li><a href="#projects">projects</a></li>
                 <li><a href="about.html">about</a></li>
                 <li><a href="javascript.html">javascript</a></li>
                 <li><a href="contact.html">contact</a></li>
@@ -44,7 +45,7 @@
         <h1>Phil Daum</h1>
         <h2>I am coding the web</h2>
     </section>
-    <section class="projects-section">
+    <section id="projects-section" class="projects-section">
         <h3>Projects</h3>
         <div class="card-wrapper">
         </div>
@@ -59,14 +60,22 @@
     <section>
         <footer>
             <div>
-                <!-- my name, developert -->
                 <!-- social links -->
+                <!-- ADD LINKS -->
+                <div class="socials">
+                    <a href="https://github.com/PhillipDaum"><i class="fa-brands fa-square-github"></i></a>
+                    <a href="https://codepen.io/phillipdaum" target="_blank"><i class="fa-brands fa-codepen"></i></a>
+                    <a href="https://www.linkedin.com/in/daumphil/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="contact.html"><i class="fa fa-solid fa-envelope"></i></a>
+                </div>
+                <!-- <i class="fa fa-brands fa-linkedin"></i>
+                 <i class="fa fa-brands fa-codepen"></i>
+              <i class="fa fa-solid fa-envelope"></i> -->
                 <p>&copy; Phil Daum. All Rights reserved</p>
             </div>
         </footer>
     </section>
     <script src="js/custom.js" type="module"></script>
-    <!-- font awesome -->
-    <script src="https://kit.fontawesome.com/0544cb5778.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
