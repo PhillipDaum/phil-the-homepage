@@ -8,11 +8,11 @@ function displayCards() {
         // can add link to both the repo and the hosted site
         makeCard.innerHTML = `
         <h4>${item.title}</h4>
-        <img src=${item.image} alt="${item.imageAlt}">
+        <a href="${item.gitHubPages}"><img src=${item.image} alt="${item.imageAlt}"></a>
         <p>${item.description}</p>
         <div class="socials">
-          <a href="${item.gitHub}"><i class="fa-brands fa-square-github"></i></a>
-          <a href="${item.gitHubPages}"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <a href="${item.gitHub}" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+          <a href="${item.gitHubPages}" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </div>
         `
         document.querySelector(".card-wrapper").appendChild(makeCard);

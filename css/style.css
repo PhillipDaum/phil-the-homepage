@@ -34,6 +34,7 @@
 body {
     border: 0;
     margin: 0;
+    font-family: var(--main);
     background-color: var(--background-light);
 }
 /* header */
@@ -45,10 +46,6 @@ body {
     height: 4rem;
 }
 /* breadcrumb */
-.breadcrumb {
-    /* add variable */
-    font-family: var(--main);
-}
 .breadcrumb ul {
     list-style: none;
     display: flex;
@@ -146,7 +143,11 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 90%;
+    margin: .5rem;
+    padding: .75rem;
+    background-color: var(--background-dark);
+    color: var(--font-light);
+    border-radius: .2rem;
 }
 .card h4 {
     font-size: 1.2rem;
@@ -156,8 +157,25 @@ section {
     width: 100%;
     border-radius: .2rem;
 }
+.card .socials i {
+    font-size: 1.4rem;
+    color:  var(--button-color);
+}
 
-/* buttons */
+/* main page contact section */
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+.button a {
+    text-decoration: none;
+    background-color: var(--button-color);
+    padding: 1rem;
+    border-radius: .3rem;
+    color: var(--font-dark);
+}
 
 /* footer */
 footer div {
