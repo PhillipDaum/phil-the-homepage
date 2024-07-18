@@ -1,82 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>phil</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.6.0/css/all.css">
 </head>
+
 <body>
-    <div class="top-bar">
-        <!-- make this like a breadcrumb -->
-        <div class="breadcrumb">
-            <ul>
-                <li>
-                    <i class="fa-solid fa-code"></i>
-                </li>
-                <li>
-                    <p>Phil Daum</p>
-                </li>
-                <!-- javascript will add a "/" then the name of the next page -->
-                <!-- could add more for parts of page -->
-            </ul>
+    <div class="header">
+        <div class="mobile-header">
+            <div class="breadcrumb">
+                <ul>
+                    <li>
+                        <i class="fa fa-solid fa-code"></i>
+                    </li>
+                    <li>
+                        <p>Phil Daum</p>
+                    </li>
+                </ul>
+            </div>
+            <!-- nav  -->
+            <!-- hamurger menu -->
+            <div class="burger">
+                <button class="burger-button">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
         </div>
-        <!-- nav  -->
         <nav>
-            <ul>
-                <!-- FIX THE LINK -->
-                <li><a href="#">projects</a></li>
+            <ul class="nav">
+                <!-- FIX ASK HOW  -->
+                <li><a href="index.html/#projects">projects</a></li>
                 <li><a href="about.html">about</a></li>
                 <li><a href="javascript.html">javascript</a></li>
                 <li><a href="contact.html">contact</a></li>
+                <li><a href="https://github.com/PhillipDaum" target="_blank"><i
+                            class="fa-brands fa-square-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/daumphil/" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i></a></li>
+                <!-- ADD BETTER RESUME, defaults to browser pdf viewer -->
+                <li><a class="resume" href="assets/PhilDaumResume.pdf">resume</a></li>
             </ul>
         </nav>
     </div>
-    <!-- main  -->
-    <section class="hero-form">
-        <!-- contact -->
-        <div class="contact-wrapper">
-            <h3>What's up!</h3>
-            <div class="form-wrapper">
-                <p>*required</p>
-                <form action="">
-                    <fieldset class="user-info">
-                        <div class="name-and-email">
-                            <label for="name">Name*:</label>
-                            <input type="text" id="name" name="name" minlength="1" maxlength="25" required>
-                        </div>
-                        <div class="name-and-email">
-                            <label for="email">Email*:</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <label for="comment">Comment</label>
-                        <!-- set size with rows and cols -->
-                        <div>
-                            <textarea class="comment-area" name="comment" id="comment" rows="3" cols=""></textarea>
-                        </div>
-                    </fieldset>
-                    <fieldset>
-                        <input type="submit" value="submit" class="submit-button">
-                    </fieldset>
-                </form>
-            </div>
-        </div>
-    </section>
+    <main>
+        <section class="contact-form">
 
+            <!-- contact -->
+            <div class="contact-wrapper">
+                <h3>What's up!</h3>
+                <div class="form-wrapper">
+                    <p>*required</p>
+                    <form action="">
+                        <fieldset class="user-info">
+                            <div class="name-and-email">
+                                <label for="name">Name*:</label>
+                                <input type="text" id="name" name="name" minlength="1" maxlength="25" required>
+                            </div>
+                            <div class="name-and-email">
+                                <label for="email">Email*:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <label for="comment">Comment</label>
+                            <!-- set size with rows and cols -->
+                            <div>
+                                <textarea class="comment-area" name="comment" id="comment" rows="3" cols="13"></textarea>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <input type="submit" value="submit" class="submit-button">
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+    </main>
     <!-- footer -->
     <section>
         <footer>
             <div>
-                <!-- my name, developert -->
-                <!-- social links -->
+                <div class="socials">
+                    <a href="https://github.com/PhillipDaum" target="_blank"><i
+                            class="fa-brands fa-square-github"></i></a>
+                    <a href="https://codepen.io/phillipdaum" target="_blank"><i class="fa-brands fa-codepen"></i></a>
+                    <a href="https://www.linkedin.com/in/daumphil/" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="contact.html"><i class="fa fa-solid fa-envelope" target="_blank"></i></i></a>
+                </div>
                 <p>&copy; Phil Daum. All Rights reserved</p>
             </div>
         </footer>
     </section>
     <script src="js/custom.js" type="module"></script>
-    <!-- font awesome -->
-    <script src="https://kit.fontawesome.com/0544cb5778.js" crossorigin="anonymous"></script>
 </body>
+
 </html>

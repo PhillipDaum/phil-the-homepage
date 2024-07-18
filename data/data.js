@@ -31,6 +31,7 @@ let projects = [
     },
     // Change these
     // art page, horoscopes, city picker, anything else?
+    // get pictures for these! 
     {
 
         title: "Cannon's Coffee",

@@ -1,56 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>phil</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.6.0/css/all.css">
 </head>
+
 <body>
-    <div class="top-bar">
-        <!-- make this like a breadcrumb -->
-        <div class="breadcrumb">
-            <ul>
-                <li>
-                    <i class="fa-solid fa-code"></i>
-                </li>
-                <li>
-                    <p>Phil Daum</p>
-                </li>
-                <!-- javascript will add a "/" then the name of the next page -->
-                <!-- could add more for parts of page -->
-            </ul>
+    <div class="header">
+        <div class="mobile-header">
+            <div class="breadcrumb">
+                <ul>
+                    <li>
+                        <i class="fa fa-solid fa-code"></i>
+                    </li>
+                    <li>
+                        <p>Phil Daum</p>
+                    </li>
+                </ul>
+            </div>
+            <!-- nav  -->
+            <!-- hamurger menu -->
+            <div class="burger">
+                <button class="burger-button">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
         </div>
-        <!-- nav  -->
         <nav>
-            <ul>
-                <!-- FIX THE LINK -->
-                <li><a href="index.html">projects</a></li>
+            <ul class="nav">
+                <li><a href="#projects">projects</a></li>
                 <li><a href="about.html">about</a></li>
                 <li><a href="javascript.html">javascript</a></li>
                 <li><a href="contact.html">contact</a></li>
+                <li><a href="https://github.com/PhillipDaum" target="_blank"><i
+                            class="fa-brands fa-square-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/daumphil/" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i></a></li>
+                <!-- ADD BETTER RESUME, defaults to browser pdf viewer -->
+                <li><a class="resume" href="assets/PhilDaumResume.pdf">resume</a></li>
             </ul>
         </nav>
     </div>
-    <!-- main  -->
-    <section class="javascript-section">
-        <p>Have a look at javascript stuffs
+    <main>
+        <section class="javascript-section">
+            <h2>Javascript is neat</h2>
+            <div class="javascript-buttons">
+                <p class="button">make a madlib</p>
+                <p class="button">see times in other places</p>
+                <p class="button">change colors of stuff</p>
+            </div>
+            <div class="javascript-display">
 
-        </p>
-      
-    </section>
+                <div class="madlib-wrapper">
+                    <h3>Make a madlib!</h3>
+                    <div class="form-wrapper">
+                        <p>*required</p>
+                        <form action="" id="madlib-form">
+                            <fieldset class="madlib words">
+                                <div>
+                                    <label for="adjective1">Adjective*:</label>
+                                    <input type="text" id="adjective1" name="adjective1" required>
+                                </div>
+                                <div>
+                                    <label for="humanName">Human Name*:</label>
+                                    <input type="text" id="humanName" name="humanName" required>
+                                </div>
+                                <div>
+                                    <label for="adjective2">Adjective*:</label>
+                                    <input type="text" id="adjective2" name="adjective2" required>
+                                </div>
+                                <div>
+                                    <label for="noun1">Noun*:</label>
+                                    <input type="text" id="noun1" name="noun1" required>
+                                </div>
+                                <div>
+                                    <label for="noun2">Noun*:</label>
+                                    <input type="text" id="noun2" name="noun2" required>
+                                </div>
+                                <div>
+                                    <label for="verb1">Verb*:</label>
+                                    <input type="text" id="verb1" name="verb1" required>
+                                </div>
+                                <div>
+                                    <label for="verbEndingInIng">Verb Ending in 'ing'*:</label>
+                                    <input type="text" id="verbEndingInIng" name="verbEndingInIng" required>
+                                </div>
+                                <div>
+                                    <label for="pluralNoun1">Plural Noun*:</label>
+                                    <input type="text" id="pluralNoun1" name="pluralNoun1" required>
+                                </div>
+                                <div>
+                                    <label for="adjective3">Adjective*:</label>
+                                    <input type="text" id="adjective3" name="adjective3" required>
+                                </div>
+                                <div>
+                                    <label for="animal">Animal*:</label>
+                                    <input type="text" id="animal" name="animal" required>
+                                </div>
+                                <div>
+                                    <label for="villainName">Villain Name*:</label>
+                                    <input type="text" id="villainName" name="villainName" required>
+                                </div>
+                                <div>
+                                    <label for="noun3">Noun*:</label>
+                                    <input type="text" id="noun3" name="noun3" required>
+                                </div>
+                                <div>
+                                    <label for="adjective4">Adjective*:</label>
+                                    <input type="text" id="adjective4" name="adjective4" required>
+                                </div>
+                                <div>
+                                    <label for="adjective5">Adjective*:</label>
+                                    <input type="text" id="adjective5" name="adjective5" required>
+                                </div>
+                                <div>
+                                    <label for="place">Place*:</label>
+                                    <input type="text" id="place" name="place" required>
+                                </div>
+                                <div>
+                                    <label for="adjective6">Adjective*:</label>
+                                    <input type="text" id="adjective6" name="adjective6" required>
+                                </div>
+                                <div>
+                                    <label for="funnyDanceMove">Funny Dance Move*:</label>
+                                    <input type="text" id="funnyDanceMove" name="funnyDanceMove" required>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <input type="submit" value="Submit" class="submit-button">
+                            </fieldset>
+                        </form>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- make a madlib -->
+                <!-- form pops up and asks for some information -->
+            <!-- change colors of stuff -->
+            <!-- look at time in other places! -->
+        </section>
+    </main>
     <!-- footer -->
     <section>
         <footer>
             <div>
-                <!-- my name, developert -->
-                <!-- social links -->
+                <div class="socials">
+                    <a href="https://github.com/PhillipDaum" target="_blank"><i
+                            class="fa-brands fa-square-github"></i></a>
+                    <a href="https://codepen.io/phillipdaum" target="_blank"><i class="fa-brands fa-codepen"></i></a>
+                    <a href="https://www.linkedin.com/in/daumphil/" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="contact.html"><i class="fa fa-solid fa-envelope" target="_blank"></i></i></a>
+                </div>
                 <p>&copy; Phil Daum. All Rights reserved</p>
             </div>
         </footer>
     </section>
     <script src="js/custom.js" type="module"></script>
-    <!-- font awesome -->
-    <script src="https://kit.fontawesome.com/0544cb5778.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
