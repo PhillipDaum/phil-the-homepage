@@ -18,7 +18,7 @@
     --accent-3: #707070; /* Darker gray for emphasis */
     
     /* highlight colors */
-    --highlight-1: #00AEEF; /* Bright cyan for links and highlights */
+    --highlight-1: #00AEEF; /* USE Bright cyan for links and highlights */
     --highlight-2: #FF6F61; /* Vivid coral for buttons and accents */
 
     /* specific elements */
@@ -37,13 +37,21 @@ body {
     font-family: var(--main);
     background-color: var(--background-light);
 }
-/* header */
-.header{
+
+/* HEADER */
+.header {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     /* header height - see nav that pops out */
-    height: 4rem;
+    height: 3rem;
+}
+.mobile-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 /* breadcrumb */
 .breadcrumb ul {
@@ -59,10 +67,11 @@ body {
     font-size: 1.2rem;
     padding-left: .5rem;
 }
-
 /* nav */
-nav ul {
+nav {
     display: none;
+}
+nav ul {
     gap: 1rem;
     font-family: monospace;
     list-style: none;
@@ -84,17 +93,17 @@ nav li a {
     justify-content: flex-start;
     justify-content: space-around;
     height: 100vh;
-    height: calc(100% - 4rem);
+    height: calc(100% - 3.2rem);
     width: 50%;
     transition: all 400ms;
     background-color: var(--background-light);
-    top: 4rem;
+    top: 3.2rem;
   }
 /* hamburger button */
 .burger {
 	/* tweak */
-	padding: .3rem;
-	margin: 1rem;
+	padding-top: .6rem;
+    padding-right: 1.4rem;
   } 
 /* sizing for font awesome burger button */
 .burger i {
@@ -102,16 +111,16 @@ nav li a {
     cursor: pointer;
 }
 
-/* gradient borders */
+/* GRADIENT BORDERS - all */
 section {
     border-top: .2rem solid transparent;
     border-image: linear-gradient(45deg, var(--gradient-border-start),var(--gradient-border-end));
     border-image-slice: 1;
 }
 
-/* hero section */
+/* HERO SECTION */
 .hero-section {
-    /* is good for mobile */
+    /* is good for mobile? */
     height: 30vh;
     display: flex;
     flex-direction: column;
@@ -124,8 +133,19 @@ section {
 .hero-section p {
     font-size: 1.2rem;
 }
+.hero-section h1 {
+    color: var(--gradient-border-start);
+    font-size: 4rem;
+    margin: 0;
+    padding-left: 1rem;
+}
+.hero-section h2 {
+    color: var(--button-color);
+    margin: 0;
+    padding-left: .5rem;
+}
 
-/* projects section */
+/* PROJECTS SECTION */
 .projects-section {
     padding: .5rem;
 }
@@ -201,7 +221,9 @@ footer div .socials i {
         grid-template-columns: repeat(3, 1fr);
     }
     nav {
+        display: block;
         flex-direction: row;
+        padding-top: 1.2rem;
         padding-right: 1rem;
     }
     .hero-section {
@@ -219,7 +241,7 @@ footer div .socials i {
     }
     nav a:hover {
         /* CHANGE COLOR */
-        border-bottom: red solid 1rem;
+        border-bottom: var(--gradient-border-start) solid .2rem;
         cursor: pointer;
     }
 }

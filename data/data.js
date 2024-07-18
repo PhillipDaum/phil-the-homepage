@@ -30,6 +30,7 @@ let projects = [
         gitHubPages: "https://phillipdaum.github.io/cannons-coffee/",
     },
     // Change these
+    // art page, horoscopes, city picker, anything else?
     {
 
         title: "Cannon's Coffee",

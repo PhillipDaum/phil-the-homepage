@@ -24,8 +24,11 @@ displayCards()
 // the event listner way seems to work better then adding onclick in html when using modules in JS
 document.querySelector(".burger-button").addEventListener("click", showHamburger);
 const burger = document.querySelector(".burger-button i");
-const nav = document.querySelector(".nav");
-function showHamburger() {
+const navUl = document.querySelector(".nav");
+const nav = document.querySelector("nav")
+;function showHamburger() {
   burger.classList.toggle("fa-times");
-  nav.classList.toggle("nav-active"); 
+  navUl.classList.toggle("nav-active");
+  // fixed bug, now tiny bug, if the side menu is out and user makes it big again
+  nav.style.display = "block";
 }
