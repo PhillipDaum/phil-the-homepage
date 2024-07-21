@@ -1,8 +1,12 @@
 /* colors and fonts */
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp');
+
+
 :root {
     /* fonts */
     --mono: 'Courier New', monospace;
     --main: 'Arial', sans-serif;
+    --old: "MedievalSharp", cursive;
     
     /* base colors */
     --background-light: #ada4a4;
@@ -67,6 +71,13 @@ body {
     font-size: 1.2rem;
     padding-left: .5rem;
 }
+.breadcrumb a {
+    text-decoration: none;
+    color: var(--font-dark);
+}
+.breadcrumb a:hover {
+    border-bottom: var(--gradient-border-start) solid .2rem;
+}
 /* nav */
 nav {
     display: none;
@@ -84,6 +95,11 @@ nav ul {
 nav li a {
     text-decoration: none;
     color: var(--font-dark);
+}
+nav a:hover {
+    /* CHANGE COLOR */
+    border-bottom: var(--gradient-border-start) solid .2rem;
+    cursor: pointer;
 }
 .nav-active {
     right: 0;
@@ -245,10 +261,29 @@ footer div .socials i {
 }
 
 /* JAVASCRIPT PAGE */
+/* madlib */
+.madlib-card {
+    /* display: none */
+    display: flex;
+    margin: .5rem;
+    padding: .3rem;
+    /* change colors */
+    background-color: var(--font-light);
+    border: var(--accent-1) .3rem solid;
+    border-radius: .2rem;
+}
+.really-big-and-fancy {
+    font-family: var(--old);
+    font-size: 3.5rem;
+}
+.big-fancy {
+    font-family: var(--old);
+    font-size: 2.5rem;
+}
 
 
 
-/* media queries  */
+/* MEDIA QUERIES  */
 @media (min-width: 650px) {
     .card-wrapper {
         grid-template-columns: repeat(3, 1fr);
@@ -270,11 +305,6 @@ footer div .socials i {
         right: revert;
         flex-direction: row;
         position: revert;
-    }
-    nav a:hover {
-        /* CHANGE COLOR */
-        border-bottom: var(--gradient-border-start) solid .2rem;
-        cursor: pointer;
     }
 }
 /* @ min-width 900 px */

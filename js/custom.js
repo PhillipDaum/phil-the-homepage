@@ -1,12 +1,17 @@
 import projects from "../data/data.js"
 
+// for javascript page
+const madlibForm = document.getElementById("madlib-form");
+
 // does correct function for each page
+// avoids error
 let whereAt = window.location.href.split("/");
 let currentPage = whereAt[whereAt.length - 1];
 if (currentPage === "index.html") {
+  // does it need the false at the end?
   window.addEventListener('DOMContentLoaded', displayCards, false);
 } else if (currentPage === "javascript.html") {
-  console.log("doodoo")
+  madlibForm.addEventListener("submit", onFormSubmit);
   // all the functions here
 }
 
@@ -19,7 +24,7 @@ function displayCards() {
         // can add link to both the repo and the hosted site
         makeCard.innerHTML = `
         <h4>${item.title}</h4>
-        <a href="${item.gitHubPages}"><img src=${item.image} alt="${item.imageAlt}"></a>
+        <a href="${item.gitHubPages}" target="_blank"><img src=${item.image} alt="${item.imageAlt}"></a>
         <p>${item.description}</p>
         <div class="socials">
           <a href="${item.gitHub}" target="_blank"><i class="fa-brands fa-square-github"></i></a>
@@ -45,27 +50,23 @@ const nav = document.querySelector("nav")
 }
 
 // JAVASCRIPT PAGE
-// Mad Libs
-const madlibForm = document.getElementById("madlib-form");
-madlibForm.addEventListener("submit", onFormSubmit);
+// Mad Libs - there is one little bit at the top!
 function onFormSubmit(event) {
 	event.preventDefault();
 	const data = new FormData(event.target);
 	const dataObject = Object.fromEntries(data.entries());
-  console.log(dataObject);
+  const madlib = `
+  in a ${dataObject.adjective1} tech utopia, a coder named ${dataObject.humanName} always wore their ${dataObject.adjective2} hat and sipped ${dataObject.noun1}. One day, they discovered a ${dataObject.noun2} that could ${dataObject.verb1} anything!
+  With this power, ${dataObject.humanName} started ${dataObject.verbEndingInIng} all the ${dataObject.pluralNoun1}, quickly becoming the "${dataObject.adjective3} Coder." Then, a ${dataObject.adjective4} ${dataObject.animal} warned them about the harmful ${dataObject.villainName}. Grabbing their trusty ${dataObject.noun3}, ${dataObject.humanName} set off to defeat ${dataObject.villainName}.
+  After solving ${dataObject.adjective5} coding puzzles, ${dataObject.humanName} triumphed. The ${dataObject.place} was ${dataObject.adjective6} again, and everyone celebrated by dancing the ${dataObject.funnyDanceMove}!
+  `;
+  console.log(madlib);
+  document.querySelector(".madlib-story").textContent = madlib;
+  
+  // it will update the dom, maybe fade or clear from the last thing and show a little page with the thing. 
 
-	// //above is boiler plate code
-	// userArray.push(dataObject);
-	// console.log(userArray);
 	madlibForm.reset();
 }
 
-// function makeMadlib()
 
 
-const madlib = `
-In a ${adjective1} tech utopia, a coder named ${humanName} always wore their ${adjective2} hat and sipped ${noun1}. One day, they discovered a ${noun2} that could ${verb1} anything!
-With this power, ${humanName} started ${verbEndingInIng} all the ${pluralNoun1}, quickly becoming the "${adjective3} Coder." Then, a ${adjective4} ${animal} warned them about the evil ${villainName}. Grabbing their trusty ${noun3}, ${humanName} set off to defeat ${villainName}.
-After solving ${adjective5} puzzles, ${humanName} triumphed. The ${place} was ${adjective6} again, and everyone celebrated by dancing the ${funnyDanceMove}.
-`;
-console.log(madlib);
