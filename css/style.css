@@ -1,13 +1,13 @@
 /* colors and fonts */
-@import url('https://fonts.googleapis.com/css2?family=MedievalSharp');
-
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Orbitron:wght@400..900&display=swap');
 
 :root {
     /* fonts */
     --mono: 'Courier New', monospace;
     --main: 'Arial', sans-serif;
     --old: "MedievalSharp", cursive;
-    
+    --clock: "Orbitron", sans-serif;
+
     /* base colors */
     --background-light: #ada4a4;
     --background-dark: #0A0A0A; 
@@ -79,7 +79,8 @@ body {
     border-bottom: var(--gradient-border-start) solid .2rem;
 }
 /* nav */
-nav {
+/* have a dot nav display none for small size */
+.nav {
     display: none;
 }
 nav ul {
@@ -88,7 +89,7 @@ nav ul {
     list-style: none;
     margin: 0;
     position: absolute;
-    right: -100%;
+    /* right: -100%; */
     padding: 0;
     /* different value */ 
     }
@@ -280,13 +281,24 @@ footer div .socials i {
     font-family: var(--old);
     font-size: 2.5rem;
 }
-
-
+/* world clock */
+.time-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+.time-form fieldset{
+    display: flex;
+    flex-direction: column;
+}
 
 /* MEDIA QUERIES  */
 @media (min-width: 650px) {
     .card-wrapper {
         grid-template-columns: repeat(3, 1fr);
+    }
+    /* maybe slightly confusing with .nav and nav */
+    .nav {
+        display: flex;
     }
     nav {
         display: block;
