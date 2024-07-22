@@ -7,7 +7,7 @@ const madlibForm = document.getElementById("madlib-form");
 // avoids error
 let whereAt = window.location.href.split("/");
 let currentPage = whereAt[whereAt.length - 1];
-if (currentPage === "index.html") {
+if (currentPage === "index.html" || "") {
   // does it need the false at the end?
   window.addEventListener('DOMContentLoaded', displayCards, false);
 } else if (currentPage === "javascript.html") {
