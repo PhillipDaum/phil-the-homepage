@@ -38,22 +38,11 @@ function onTimeFormSubmit(e) {
 
 
 // changing colors
-// maybe a sider that changes stuff.
-
-
-
-// let displayTime = today.toLocaleString();
-// console.log(displayTime);
-
-// let date = new Date();
-// console.log(
-//   date.toLocaleString('en-US', {
-//     timeZone: 'Africa/Nairobi',
-//   }),
-// ); // 👉️ "7/25/2023, 11:32:29 AM"
-
-// console.log(
-//   date.toLocaleString('en-US', {
-//     timeZone: 'Canada/Pacific',
-//   }),
-// ); // 👉️ "25/7/2023 8:32:29"
+// more radio buttons that change the theme!
+// have the form element thing.... then
+function changeTheme() {
+  // e.g. --background-light #0A0A0A
+  // first go through and clean up css colors! then they can be set here
+  document.documentElement.style.setProperty('--background-light', '#0A0A0A');
+}
+// changeTheme();
