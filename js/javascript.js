@@ -3,22 +3,7 @@ const madlibArea = document.querySelector(".madlib-wrapper");
 const timeArea = document.querySelector(".time-wrapper");
 const colorArea = document.querySelector(".color-wrapper");
 const madlibCard = document.querySelector(".madlib-card");
-
-console.log(madlibArea)
-// code page icon toggles if nothing else is there
-// if each of the four do not have a class of show me, give it to the placeholder
 const fillerIcon = document.querySelector(".placeholder");
-if (
-  timeArea.classList.contains("show-me") ||
-  colorArea.classList.contains("show-me") ||
-  madlibArea.classList.contains("show-me") ||
-  madlibCard.classList.toggle("show-me")
-) {
-  // LOOK
-  console.log("your dad")
-} else {
-  fillerIcon.classList.toggle("show-me");
-}
 
 const madlibButton = document.getElementById("madlib-button");
 madlibButton.addEventListener("click", showMeMadlib);
@@ -27,6 +12,12 @@ function showMeMadlib() {
     timeArea.classList.toggle("show-me");
   } else if (colorArea.classList.contains("show-me")) {
     colorArea.classList.toggle("show-me");
+  } else if (fillerIcon.classList.contains("show-me")) {
+    fillerIcon.classList.toggle("show-me");
+  } else if (madlibArea.classList.contains("show-me")) {
+    fillerIcon.classList.toggle("show-me");
+  } else if (madlibCard.classList.contains("show-me")) {
+    fillerIcon.classList.toggle("show-me");
   }
   madlibArea.classList.toggle("show-me");
 }
@@ -39,6 +30,10 @@ function showTimeSection() {
     colorArea.classList.toggle("show-me");
   } else if (madlibCard.classList.contains("show-me")) {
     madlibCard.classList.toggle("show-me");
+  } else if (fillerIcon.classList.contains("show-me")) {
+    fillerIcon.classList.toggle("show-me");
+  } else if (timeArea.classList.contains("show-me")) {
+    fillerIcon.classList.toggle("show-me");
   }
   timeArea.classList.toggle("show-me");
 }
@@ -51,6 +46,10 @@ function showMeColor() {
     timeArea.classList.toggle("show-me");
   } else if (madlibCard.classList.contains("show-me")) {
     madlibCard.classList.toggle("show-me");
+  } else if (fillerIcon.classList.contains("show-me")) {
+    fillerIcon.classList.toggle("show-me");
+  } else if (colorArea.classList.contains("show-me")) {
+    fillerIcon.classList.toggle("show-me");
   }
   colorArea.classList.toggle("show-me");
 }
