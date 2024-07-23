@@ -19,17 +19,12 @@
     /* accent colors */
     --accent-1: #383838; /* Subtle dark gray for borders and backgrounds */
     --accent-2: #505050; /* Neutral gray for secondary text and elements */
-    --accent-3: #707070; /* Darker gray for emphasis */
     
     /* highlight colors */
     --highlight-1: #00AEEF; /* USE Bright cyan for links and highlights */
     --highlight-2: #FF6F61; /* Vivid coral for buttons and accents */
 
     /* specific elements */
-    --logo-color: #00AEEF; /* Logo color */
-    --button-color: #FF6F61; /* Button color */
-    --gradient-border-start: #00AEEF; /* Start of gradient border */
-    --gradient-border-end: #FF6F61; /* End of gradient border */
     --footer-bg: #383838; /* Footer background color */
     --footer-icon: #FF4F4F; /* Footer icon color, slightly darker than buttons */
 }
@@ -68,15 +63,15 @@ body {
 }
 .breadcrumb li p {
     margin-top: -.1rem;
-    font-size: 1.2rem;
-    padding-left: .5rem;
+    font-size: 1.1rem;
+    padding-left: .2rem;
 }
 .breadcrumb a {
     text-decoration: none;
     color: var(--font-dark);
 }
 .breadcrumb a:hover {
-    border-bottom: var(--gradient-border-start) solid .2rem;
+    border-bottom: var(--highlight-1) solid .2rem;
 }
 /* nav */
 /* have a dot nav display none for small size */
@@ -85,7 +80,7 @@ body {
 }
 nav ul {
     gap: 1rem;
-    font-family: monospace;
+    font-family: var(--mono);
     list-style: none;
     margin: 0;
     position: absolute;
@@ -99,7 +94,7 @@ nav li a {
 }
 nav a:hover {
     /* CHANGE COLOR */
-    border-bottom: var(--gradient-border-start) solid .2rem;
+    border-bottom: var(--highlight-1) solid .2rem;
     cursor: pointer;
 }
 .nav-active {
@@ -131,14 +126,14 @@ nav a:hover {
 /* GRADIENT BORDERS - all */
 section {
     border-top: .2rem solid transparent;
-    border-image: linear-gradient(45deg, var(--gradient-border-start),var(--gradient-border-end));
+    border-image: linear-gradient(45deg, var(--highlight-1),var(--highlight-2));
     border-image-slice: 1;
 }
 
 /* HERO SECTION */
 .hero-section {
     /* is good for mobile? */
-    height: 30vh;
+    padding-bottom: 1rem;
     display: flex;
     flex-direction: column;
     align-content: flex-start;
@@ -151,29 +146,32 @@ section {
     font-size: 1.2rem;
 }
 .hero-section h1 {
-    color: var(--gradient-border-start);
+    color: var(--highlight-1);
     font-size: 4rem;
     margin: 0;
     padding-left: 1rem;
 }
 .hero-section h2 {
-    color: var(--button-color);
+    color: var(--highlight-2);
     margin: 0;
     padding-left: .5rem;
 }
 
 /* PROJECTS SECTION */
 .projects-section {
+    background-color: var(--background-dark);
     padding: .5rem;
 }
 .projects-section h3 {
     text-align: center;
     font-size: 1.4rem;
+    color: var(--highlight-1);
 }
 /* card wrapper */
 .card-wrapper {
     display: grid;
     grid-template-columns: 1fr;
+    background-color: var(--accent-2);
 }
 /* cards */
 .card {
@@ -185,18 +183,24 @@ section {
     background-color: var(--background-dark);
     color: var(--font-light);
     border-radius: .2rem;
+    font-family: var(--mono);
 }
 .card h4 {
     font-size: 1.2rem;
     text-align: center;
+    font-family: var(--main);
 }
 .card img {
     width: 100%;
     border-radius: .2rem;
 }
 .card .socials i {
-    font-size: 1.4rem;
-    color:  var(--button-color);
+    font-size: 2rem;
+    padding: .4rem;
+    color:  var(--highlight-1);
+}
+.card .socials i:hover {
+    color: var(--highlight-2);
 }
 
 /* main page contact section */
@@ -208,13 +212,17 @@ section {
 }
 .button a {
     text-decoration: none;
-    background-color: var(--button-color);
+    background-color: var(--highlight-2);
     padding: 1rem;
     border-radius: .3rem;
     color: var(--font-dark);
 }
 
 /* footer */
+.footer-section {
+    background-color: var(--footer-bg);
+    color: var(--font-light);
+}
 footer div {
     display: flex;
     flex-direction: column;
@@ -262,10 +270,31 @@ footer div .socials i {
 }
 
 /* JAVASCRIPT PAGE */
-/* madlib */
-.madlib-card {
-    /* display: none */
+.javascript-buttons {
     display: flex;
+    justify-content: center;
+}
+.javascript-buttons .button {
+    background-color: var(--highlight-2);
+    padding: 1rem;
+    margin: .4rem;
+    border-radius: .3rem;
+    cursor: pointer;
+}
+.placeholder {
+    display: flex;
+    justify-content: center;
+}
+.placeholder i {
+    padding: 1.6rem;
+    font-size: 8rem;
+}
+/* madlib */
+.madlib-wrapper {
+    display: none;
+}
+.madlib-card {
+    display: none;
     margin: .5rem;
     padding: .3rem;
     /* change colors */
@@ -283,7 +312,7 @@ footer div .socials i {
 }
 /* world clock */
 .time-wrapper {
-    display: flex;
+    display: none;
     flex-direction: row;
 }
 .time-form fieldset{
@@ -302,6 +331,13 @@ footer div .socials i {
     padding: 1rem;
     font-family: var(--clock);
     font-size: 4rem;
+}
+.color-wrapper {
+    display: none;
+}
+/* to make stuff show! */
+.show-me {
+    display: flex;
 }
 
 /* MEDIA QUERIES  */

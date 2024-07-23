@@ -46,19 +46,22 @@
         </nav>
     </div>
     <main>
-        <section class="javascript-section">
+        <section class="javascript-top-section">
             <h2>Javascript is neat</h2>
             <!-- click on one of the three buttons, it shows the div -->
             <div class="javascript-buttons">
-                <p class="button">make a madlib</p>
-                <p class="button">see times in other places</p>
-                <p class="button">change colors of stuff</p>
+                <p class="button" id="madlib-button">make a madlib</p>
+                <p class="button" id="time-button">see times in other places</p>
+                <p class="button" id="color-button">change colors of stuff</p>
             </div>
-            <div class="javascript-display">
-
+        </section>
+            <section class="javascript-bottom-section">
+                <div class="placeholder">
+                    <i class="fa-solid fa-file-code"></i>
+                </div>
                 <div class="madlib-wrapper">
-                    <h3>Make a madlib!</h3>
                     <div class="form-wrapper">
+                        <h3>Make a madlib!</h3>
                         <p>*required</p>
                         <form action="" id="madlib-form">
                             <!-- ADD LEGEND -->
@@ -173,7 +176,8 @@
                 </div>
                 <!-- in progress... -->
                 <div class="color-wrapper">
-                    <legend>Pick a theme to change the site colors</legend>
+                    <form action="" id="color-form">
+                        <legend>Pick a theme to change the site colors</legend>
                         <fieldset>
                             <div>
                                 <input type="radio" id="dark" name="theme" value="dark">
@@ -184,21 +188,21 @@
                                 <label for="light">Light</label>
                             </div>
                             <div>
-                                <input type="radio" id="rainbow" name="theme" value="light">
+                                <input type="radio" id="rainbow" name="theme" value="rainbow">
                                 <label for="rainbow">Rainbow</label>
                             </div>
     
                             <input type="submit" value="Submit">
                         </fieldset>
-                    
+                    </form>
                 </div>
 
-            </div>
+            </section>
             <!-- make a madlib -->
                 <!-- form pops up and asks for some information -->
             <!-- change colors of stuff -->
             <!-- look at time in other places! -->
-        </section>
+        
     </main>
     <!-- footer -->
     <section>
