@@ -3,23 +3,55 @@ const madlibArea = document.querySelector(".madlib-wrapper");
 const timeArea = document.querySelector(".time-wrapper");
 const colorArea = document.querySelector(".color-wrapper");
 const madlibCard = document.querySelector(".madlib-card");
-// also do one for the madlib card!
+
+console.log(madlibArea)
+// code page icon toggles if nothing else is there
+// if each of the four do not have a class of show me, give it to the placeholder
+const fillerIcon = document.querySelector(".placeholder");
+if (
+  timeArea.classList.contains("show-me") ||
+  colorArea.classList.contains("show-me") ||
+  madlibArea.classList.contains("show-me") ||
+  madlibCard.classList.toggle("show-me")
+) {
+  // LOOK
+  console.log("your dad")
+} else {
+  fillerIcon.classList.toggle("show-me");
+}
 
 const madlibButton = document.getElementById("madlib-button");
 madlibButton.addEventListener("click", showMeMadlib);
 function showMeMadlib() {
-  // add if statments using
-  // element.classList.contains(class); - for class "show me"
+  if (timeArea.classList.contains("show-me")) {
+    timeArea.classList.toggle("show-me");
+  } else if (colorArea.classList.contains("show-me")) {
+    colorArea.classList.toggle("show-me");
+  }
   madlibArea.classList.toggle("show-me");
 }
 const timeButton = document.getElementById("time-button");
 timeButton.addEventListener("click", showTimeSection);
 function showTimeSection() {
+  if (madlibArea.classList.contains("show-me")) {
+    madlibArea.classList.toggle("show-me");
+  } else if (colorArea.classList.contains("show-me")) {
+    colorArea.classList.toggle("show-me");
+  } else if (madlibCard.classList.contains("show-me")) {
+    madlibCard.classList.toggle("show-me");
+  }
   timeArea.classList.toggle("show-me");
 }
 const colorButton = document.getElementById("color-button");
 colorButton.addEventListener("click", showMeColor);
 function showMeColor() {
+  if (madlibArea.classList.contains("show-me")) {
+    madlibArea.classList.toggle("show-me");
+  } else if (timeArea.classList.contains("show-me")) {
+    timeArea.classList.toggle("show-me");
+  } else if (madlibCard.classList.contains("show-me")) {
+    madlibCard.classList.toggle("show-me");
+  }
   colorArea.classList.toggle("show-me");
 }
 
@@ -27,9 +59,9 @@ const madlibForm = document.getElementById("madlib-form");
 madlibForm.addEventListener("submit", onMadLibFormSubmit);
 // on madlib form submit....
 function onMadLibFormSubmit(event) {
-	event.preventDefault();
-	const data = new FormData(event.target);
-	const dataObject = Object.fromEntries(data.entries());
+  event.preventDefault();
+  const data = new FormData(event.target);
+  const dataObject = Object.fromEntries(data.entries());
 
   const madlib = `
   in a ${dataObject.adjective1} tech utopia, a coder named ${dataObject.humanName} always wore their ${dataObject.adjective2} hat and sipped ${dataObject.noun1}. One day, they discovered a ${dataObject.noun2} that could ${dataObject.verb1} anything!
@@ -40,7 +72,7 @@ function onMadLibFormSubmit(event) {
   madlibArea.classList.toggle("show-me");
   document.querySelector(".madlib-story").textContent = madlib;
   // can make overall UX for javascript area cleaner
-	madlibForm.reset();
+  madlibForm.reset();
 }
 
 // world time stuffs
@@ -68,7 +100,7 @@ function onColorFormSubmit(e) {
   const data = new FormData(e.target);
   const dataObject = Object.fromEntries(data.entries());
   console.log("look", dataObject);
-  if (dataObject.theme === "dark"){
+  if (dataObject.theme === "dark") {
     console.log("darkness surrounds")
     document.documentElement.style.setProperty('--background-light', '#0A0A0A');
     document.documentElement.style.setProperty('--background-dark', '#0A0A0A');
@@ -79,7 +111,7 @@ function onColorFormSubmit(e) {
     document.documentElement.style.setProperty('--footer-bg', '#0A0A0A');
     document.documentElement.style.setProperty('--footer-icon', '#0A0A0A');
   } else if (dataObject.theme === "light") {
-    console.log("lightness ensues") 
+    console.log("lightness ensues")
     document.documentElement.style.setProperty('--background-light', '#0A0A0A');
     document.documentElement.style.setProperty('--background-dark', '#0A0A0A');
     document.documentElement.style.setProperty('--accent-1', '#0A0A0A');
@@ -99,8 +131,5 @@ function onColorFormSubmit(e) {
     document.documentElement.style.setProperty('--footer-bg', '#0A0A0A');
     document.documentElement.style.setProperty('--footer-icon', '#0A0A0A');
   }
-  // e.g. --background-light #0A0A0A
-  // first go through and clean up css colors! then they can be set here
-  
 }
-// changeTheme();
+

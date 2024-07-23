@@ -282,7 +282,7 @@ footer div .socials i {
     cursor: pointer;
 }
 .placeholder {
-    display: flex;
+    display: none;
     justify-content: center;
 }
 .placeholder i {
