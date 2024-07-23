@@ -8,7 +8,8 @@ const madlibCard = document.querySelector(".madlib-card");
 const madlibButton = document.getElementById("madlib-button");
 madlibButton.addEventListener("click", showMeMadlib);
 function showMeMadlib() {
-  
+  // add if statments using
+  // element.classList.contains(class); - for class "show me"
   madlibArea.classList.toggle("show-me");
 }
 const timeButton = document.getElementById("time-button");
