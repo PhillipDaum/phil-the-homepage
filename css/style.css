@@ -290,6 +290,19 @@ footer div .socials i {
     display: flex;
     flex-direction: column;
 }
+.show-time {
+    width: 100%;
+    /* work css so its more responsive */
+    display: flex;
+    align-items: center;
+}
+.show-time p{
+    border: var(--background-dark) solid .6rem;
+    border-radius: .5rem;
+    padding: 1rem;
+    font-family: var(--clock);
+    font-size: 4rem;
+}
 
 /* MEDIA QUERIES  */
 @media (min-width: 650px) {

@@ -6,8 +6,7 @@ const nav = document.querySelector("nav")
 ;function showHamburger() {
   burger.classList.toggle("fa-times");
   navUl.classList.toggle("nav-active");
-  // fixed bug, now tiny bug, if the side menu is out and user makes it big again
-  nav.style.display = "block";
+  // there is a small bug if the side menu is out then the user makes it big while its out
 }
 
 
