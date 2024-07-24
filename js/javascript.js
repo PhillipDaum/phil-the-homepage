@@ -11,16 +11,20 @@ madlibButton.addEventListener("click", showMeMadlib);
 function showMeMadlib() {
   if (timeArea.classList.contains("show-me")) {
     timeArea.classList.toggle("show-me");
+    madlibArea.classList.toggle("show-me");
   } else if (colorArea.classList.contains("show-me")) {
     colorArea.classList.toggle("show-me");
+    madlibArea.classList.toggle("show-me");
   } else if (fillerIcon.classList.contains("show-me")) {
     fillerIcon.classList.toggle("show-me");
+    madlibArea.classList.toggle("show-me");
   } else if (madlibArea.classList.contains("show-me")) {
     fillerIcon.classList.toggle("show-me");
+    madlibArea.classList.toggle("show-me");
   } else if (madlibCard.classList.contains("show-me")) {
     fillerIcon.classList.toggle("show-me");
+    madlibCard.classList.toggle("show-me");
   }
-  madlibArea.classList.toggle("show-me");
 }
 // shows/hides time area
 const timeButton = document.getElementById("time-button");
@@ -97,36 +101,36 @@ function onColorFormSubmit(e) {
   const data = new FormData(e.target);
   const dataObject = Object.fromEntries(data.entries());
   console.log("look", dataObject);
-  if (dataObject.theme === "dark") {
-    console.log("darkness surrounds")
-    document.documentElement.style.setProperty('--background-light', '#0A0A0A');
-    document.documentElement.style.setProperty('--background-dark', '#0A0A0A');
-    document.documentElement.style.setProperty('--accent-1', '#0A0A0A');
-    document.documentElement.style.setProperty('--accent-2', '#0A0A0A');
-    document.documentElement.style.setProperty('--highlight-1', '#0A0A0A');
-    document.documentElement.style.setProperty('--highlight-2', '#0A0A0A');
-    document.documentElement.style.setProperty('--footer-bg', '#0A0A0A');
-    document.documentElement.style.setProperty('--footer-icon', '#0A0A0A');
-  } else if (dataObject.theme === "light") {
-    console.log("lightness ensues")
-    document.documentElement.style.setProperty('--background-light', '#0A0A0A');
-    document.documentElement.style.setProperty('--background-dark', '#0A0A0A');
-    document.documentElement.style.setProperty('--accent-1', '#0A0A0A');
-    document.documentElement.style.setProperty('--accent-2', '#0A0A0A');
-    document.documentElement.style.setProperty('--highlight-1', '#0A0A0A');
-    document.documentElement.style.setProperty('--highlight-2', '#0A0A0A');
-    document.documentElement.style.setProperty('--footer-bg', '#0A0A0A');
-    document.documentElement.style.setProperty('--footer-icon', '#0A0A0A');
-  } else if (dataObject.theme === "rainbow") {
-    console.log("colorful party")
-    document.documentElement.style.setProperty('--background-light', '#0A0A0A');
-    document.documentElement.style.setProperty('--background-dark', '#0A0A0A');
-    document.documentElement.style.setProperty('--accent-1', '#0A0A0A');
-    document.documentElement.style.setProperty('--accent-2', '#0A0A0A');
-    document.documentElement.style.setProperty('--highlight-1', '#0A0A0A');
-    document.documentElement.style.setProperty('--highlight-2', '#0A0A0A');
-    document.documentElement.style.setProperty('--footer-bg', '#0A0A0A');
-    document.documentElement.style.setProperty('--footer-icon', '#0A0A0A');
+  if (dataObject.theme === "cyberpunk") {
+    console.log("embracing the future");
+    document.documentElement.style.setProperty('--background-light', '#1A1A1D');
+    document.documentElement.style.setProperty('--background-dark', '#4E4E50');
+    document.documentElement.style.setProperty('--accent-1', '#6F2232');
+    document.documentElement.style.setProperty('--accent-2', '#950740');
+    document.documentElement.style.setProperty('--highlight-1', '#C3073F');
+    document.documentElement.style.setProperty('--highlight-2', '#1F1F1F');
+    document.documentElement.style.setProperty('--footer-bg', '#4E4E50');
+    document.documentElement.style.setProperty('--footer-icon', '#950740');
+  } else if (dataObject.theme === "nature") {
+    console.log("connecting with nature");
+    document.documentElement.style.setProperty('--background-light', '#FAF3E0');
+    document.documentElement.style.setProperty('--background-dark', '#8B5E3C');
+    document.documentElement.style.setProperty('--accent-1', '#B29E58');
+    document.documentElement.style.setProperty('--accent-2', '#5B8C5A');
+    document.documentElement.style.setProperty('--highlight-1', '#A4DE02');
+    document.documentElement.style.setProperty('--highlight-2', '#88B04B');
+    document.documentElement.style.setProperty('--footer-bg', '#8B5E3C');
+    document.documentElement.style.setProperty('--footer-icon', '#5B8C5A');
+  } else if (dataObject.theme === "pastel") {
+    console.log("embracing calm and soft tones");
+    document.documentElement.style.setProperty('--background-light', '#FFF1E6');
+    document.documentElement.style.setProperty('--background-dark', '#FFCAD4');
+    document.documentElement.style.setProperty('--accent-1', '#B4F8C8');
+    document.documentElement.style.setProperty('--accent-2', '#A0E7E5');
+    document.documentElement.style.setProperty('--highlight-1', '#FFAEBC');
+    document.documentElement.style.setProperty('--highlight-2', '#FBE7C6');
+    document.documentElement.style.setProperty('--footer-bg', '#FFCAD4');
+    document.documentElement.style.setProperty('--footer-icon', '#A0E7E5');
   }
 }
 

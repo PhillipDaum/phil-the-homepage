@@ -7,7 +7,6 @@ function displayCards() {
     for (let item of projects) {
         let makeCard = document.createElement("div");
         makeCard.className = "card";
-        // can add link to both the repo and the hosted site
         makeCard.innerHTML = `
         <h4>${item.title}</h4>
         <a href="${item.gitHubPages}" target="_blank"><img src=${item.image} alt="${item.imageAlt}"></a>

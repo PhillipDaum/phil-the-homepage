@@ -17,11 +17,11 @@
     --font-dark: #141414; /* Dark font color */
 
     /* accent colors */
-    --accent-1: #383838; /* Subtle dark gray for borders and backgrounds */
-    --accent-2: #505050; /* Neutral gray for secondary text and elements */
+    --accent-1: #383838; /* Subtle dark gray*/
+    --accent-2: #505050; /* Neutral gray */
     
     /* highlight colors */
-    --highlight-1: #00AEEF; /* USE Bright cyan for links and highlights */
+    --highlight-1: #00AEEF; /* Bright cyan for links and highlights */
     --highlight-2: #FF6F61; /* Vivid coral for buttons and accents */
 
     /* specific elements */
@@ -31,7 +31,6 @@
 
 /* MOBILE FIRST DESIGN */
 body {
-    border: 0;
     margin: 0;
     font-family: var(--main);
     background-color: var(--background-light);
@@ -74,7 +73,6 @@ body {
     border-bottom: var(--highlight-1) solid .2rem;
 }
 /* nav */
-/* have a dot nav display none for small size */
 .nav {
     display: none;
 }
@@ -86,14 +84,12 @@ nav ul {
     position: absolute;
     /* right: -100%; */
     padding: 0;
-    /* different value */ 
     }
 nav li a {
     text-decoration: none;
     color: var(--font-dark);
 }
 nav a:hover {
-    /* CHANGE COLOR */
     border-bottom: var(--highlight-1) solid .2rem;
     cursor: pointer;
 }
@@ -132,7 +128,6 @@ section {
 
 /* HERO SECTION */
 .hero-section {
-    /* is good for mobile? */
     padding-bottom: 1rem;
     display: flex;
     flex-direction: column;
@@ -159,19 +154,23 @@ section {
 
 /* PROJECTS SECTION */
 .projects-section {
-    background-color: var(--background-dark);
+    background-color: var(--accent-1);
     padding: .5rem;
+    display: flex;
+    flex-direction: column;
 }
 .projects-section h3 {
-    text-align: center;
     font-size: 1.4rem;
+    margin: auto;
+    padding: 1rem;
+    border-radius: .3rem;
     color: var(--highlight-1);
+    background-color: var(--background-dark);
 }
 /* card wrapper */
 .card-wrapper {
     display: grid;
     grid-template-columns: 1fr;
-    background-color: var(--accent-2);
 }
 /* cards */
 .card {
@@ -189,6 +188,7 @@ section {
     font-size: 1.2rem;
     text-align: center;
     font-family: var(--main);
+    border-bottom: var(--highlight-2) solid .14rem;
 }
 .card img {
     width: 100%;
@@ -213,9 +213,13 @@ section {
 .button a {
     text-decoration: none;
     background-color: var(--highlight-2);
+    font-weight: bold;
     padding: 1rem;
     border-radius: .3rem;
     color: var(--font-dark);
+}
+.button a:hover {
+    background-color: var(--highlight-1);
 }
 
 /* footer */
@@ -240,24 +244,50 @@ footer div .socials i {
     color: var(--footer-icon);
 } 
 
-/* CONTACT PAGE */
-.contact-form {
-    width: 90%;
-    margin: auto;
+/* SUBMIT BUTTON - contact and javascript pages */
+.submit-button {
+    background-color: var(--highlight-2);
+    border: none;
+    padding: .8rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border-radius: .2rem;
+    cursor: pointer;
 }
+.submit-button:hover {
+    background-color: var(--highlight-1);
+}
+
+/* CONTACT PAGE */
 .contact-wrapper {
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 2rem;
+    padding: 1rem;
+    margin: 1rem;
 }
-.form-wrapper {
+.contact-form-wrapper {
     width: 100%;
-    background-color: var(--accent-2);
+    background-color: var(--background-dark);
     padding: 1rem;
     border-radius: .2rem;
-    color: var(--font-light);
+    color: var(--highlight-1);
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+.contact-form-wrapper fieldset {
+    border: none;
+}
+.user-info .name-and-email {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    padding-bottom: .8rem;
+}
+.comment-area {
+    width: 100%;
+    height: 10rem;
 }
 
 /* ABOUT PAGE */
@@ -265,21 +295,27 @@ footer div .socials i {
     display: flex;
     gap: 2rem;
     justify-content: center;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding: 2rem;
 }
 
 /* JAVASCRIPT PAGE */
+.javascript-top-section h2 {
+    text-align: center;
+}
 .javascript-buttons {
     display: flex;
     justify-content: center;
 }
 .javascript-buttons .button {
     background-color: var(--highlight-2);
+    font-weight: bold;
     padding: 1rem;
     margin: .4rem;
     border-radius: .3rem;
     cursor: pointer;
+}
+.javascript-buttons .button:hover {
+    background-color: var(--highlight-1);
 }
 .placeholder {
     display: none;
@@ -292,15 +328,48 @@ footer div .socials i {
 /* madlib */
 .madlib-wrapper {
     display: none;
+    margin: 1rem;
+}
+.madlib-form-wrapper {
+    width: 100%;
+    background-color: var(--background-dark);
+    padding: 1rem;
+    border-radius: .2rem;
+    color: var(--highlight-1);
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+.madlib-wrapper legend {
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+.madlib-wrapper fieldset {
+   border: none;
+}
+.madlib-words div {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .2rem;
+    padding-bottom: .6rem;
 }
 .madlib-card {
     display: none;
+    flex-direction: column;
     margin: .5rem;
     padding: .3rem;
     /* change colors */
     background-color: var(--font-light);
     border: var(--accent-1) .3rem solid;
     border-radius: .2rem;
+}
+.once-upon-a-time {
+    text-align: center;
+    margin-bottom: 0;
+}
+.madlib-story {
+    margin-top: 0;
+    font-family: var(--mono);
 }
 .really-big-and-fancy {
     font-family: var(--old);
@@ -313,7 +382,14 @@ footer div .socials i {
 /* world clock */
 .time-wrapper {
     display: none;
-    flex-direction: row;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+.time-form {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
 }
 .time-form fieldset{
     display: flex;
@@ -323,7 +399,7 @@ footer div .socials i {
     width: 100%;
     /* work css so its more responsive */
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
 .show-time p{
     border: var(--background-dark) solid .6rem;
@@ -332,8 +408,19 @@ footer div .socials i {
     font-family: var(--clock);
     font-size: 4rem;
 }
+/* color theme */
 .color-wrapper {
     display: none;
+}
+.color-form {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.color-submit-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 /* to make stuff show! */
 .show-me {
