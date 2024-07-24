@@ -125,6 +125,12 @@ section {
     border-image: linear-gradient(45deg, var(--highlight-1),var(--highlight-2));
     border-image-slice: 1;
 }
+/* fixing a bug, the border above the projects section gradient is weird */
+.projects-section {
+    border-top: .2rem solid transparent;
+    border-image: linear-gradient(85deg, var(--highlight-1),var(--highlight-2));
+    border-image-slice: 1;
+}
 
 /* HERO SECTION */
 .hero-section {
