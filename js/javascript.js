@@ -103,6 +103,7 @@ function onColorFormSubmit(e) {
   console.log("look", dataObject);
   if (dataObject.theme === "cyberpunk") {
     console.log("embracing the future");
+    // fix these colors that are too dark
     document.documentElement.style.setProperty('--background-light', '#1A1A1D');
     document.documentElement.style.setProperty('--background-dark', '#4E4E50');
     document.documentElement.style.setProperty('--accent-1', '#6F2232');
@@ -111,6 +112,8 @@ function onColorFormSubmit(e) {
     document.documentElement.style.setProperty('--highlight-2', '#1F1F1F');
     document.documentElement.style.setProperty('--footer-bg', '#4E4E50');
     document.documentElement.style.setProperty('--footer-icon', '#950740');
+    document.documentElement.style.setProperty('--font-dark', '#E0E0E0');
+    
   } else if (dataObject.theme === "nature") {
     console.log("connecting with nature");
     document.documentElement.style.setProperty('--background-light', '#FAF3E0');
@@ -121,6 +124,7 @@ function onColorFormSubmit(e) {
     document.documentElement.style.setProperty('--highlight-2', '#88B04B');
     document.documentElement.style.setProperty('--footer-bg', '#8B5E3C');
     document.documentElement.style.setProperty('--footer-icon', '#5B8C5A');
+    document.documentElement.style.setProperty('--font-dark', '#141414');
   } else if (dataObject.theme === "pastel") {
     console.log("embracing calm and soft tones");
     document.documentElement.style.setProperty('--background-light', '#FFF1E6');
@@ -131,6 +135,7 @@ function onColorFormSubmit(e) {
     document.documentElement.style.setProperty('--highlight-2', '#FBE7C6');
     document.documentElement.style.setProperty('--footer-bg', '#FFCAD4');
     document.documentElement.style.setProperty('--footer-icon', '#A0E7E5');
+    document.documentElement.style.setProperty('--font-dark', '#141414');
   }
 }
 

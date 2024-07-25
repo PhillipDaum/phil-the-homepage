@@ -10,7 +10,7 @@ const nav = document.querySelector("nav")
 }
 
 
-
+// MAYBE I CAN DO SOMETHING here that will fix the tiny bug where if you expand it while the hamburger menu is ouy
 
 
 

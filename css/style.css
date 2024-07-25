@@ -14,7 +14,7 @@
 
     /* font colors */
     --font-light: #E0E0E0; /* Light font color */
-    --font-dark: #141414; /* Dark font color */
+    --font-dark: hsl(0, 0%, 8%); /* Dark font color */
 
     /* accent colors */
     --accent-1: #383838; /* Subtle dark gray*/
@@ -34,6 +34,7 @@ body {
     margin: 0;
     font-family: var(--main);
     background-color: var(--background-light);
+    color: var(--font-dark);
 }
 
 /* HEADER */
@@ -93,10 +94,12 @@ nav a:hover {
     border-bottom: var(--highlight-1) solid .2rem;
     cursor: pointer;
 }
+/* flex direction row applies before column? could do */
 .nav-active {
     right: 0;
     display: flex;
     padding-left: 1.5rem;
+    /* here is the issue spot row/col - resolved! - leaving comment for later use*/
     flex-direction: column;
     justify-content: flex-start;
     justify-content: space-around;
@@ -185,8 +188,8 @@ section {
     align-items: center;
     margin: .5rem;
     padding: .75rem;
-    background-color: var(--background-dark);
-    color: var(--font-light);
+    background-color: var(--background-light);
+    color: var(--font-dark);
     border-radius: .2rem;
     font-family: var(--mono);
 }
@@ -203,10 +206,10 @@ section {
 .card .socials i {
     font-size: 2rem;
     padding: .4rem;
-    color:  var(--highlight-1);
+    color:  var(--font-dark);
 }
 .card .socials i:hover {
-    color: var(--highlight-2);
+    color: var(--highlight-1);
 }
 
 /* main page contact section */
@@ -299,11 +302,18 @@ footer div .socials i {
 /* ABOUT PAGE */
 .about-section {
     display: flex;
+    background-color: var(--background-dark);
     gap: 2rem;
-    justify-content: center;
+    flex-direction: column;
     padding: 2rem;
+    padding-bottom: 0;
+    align-items: center;
 }
-
+.about-text {
+    background-color: var(--background-light);
+    padding: 1rem;
+    border-radius: .3rem;
+}
 /* JAVASCRIPT PAGE */
 .javascript-top-section h2 {
     text-align: center;
@@ -442,6 +452,10 @@ footer div .socials i {
     .nav {
         display: flex;
     }
+    .nav-active {
+        flex-direction: row;
+
+    }
     nav {
         display: block;
         flex-direction: row;
@@ -461,5 +475,3 @@ footer div .socials i {
         position: revert;
     }
 }
-/* @ min-width 900 px */
-
