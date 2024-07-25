@@ -18,7 +18,7 @@ let projects = [
     },
     {
         title: "Farmer's Market",
-        image: "/img/portfolio-fm.png",
+        image: "./img/portfolio-fm.png",
         imageAlt: "Screenshot of a fresh and pristine farmer's market site featuring images of farm fresh produce.",
         description: "Using lessons learned from the Cannons Coffee assignment, I built this website according to specifications provided. I then added some JavaScript elements, including a hamburger button",
         gitHub: "https://github.com/PhillipDaum/cannons-coffee",
@@ -42,7 +42,7 @@ let projects = [
     },
     {
         title: "Daily Horoscope",
-        image: "/img/horoscope.png",
+        image: "./img/horoscope.png",
         imageAlt: "Screenshot of a simple website that shows users a daily horoscope, with a cute purple color theme",
         description: "I built this while learning how to move around data objects!",
         gitHub: "https://github.com/PhillipDaum/horoscopes",
