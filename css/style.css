@@ -43,35 +43,32 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* header height - see nav that pops out */
+    align-items: center;
     height: 3rem;
 }
-.mobile-header {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-/* breadcrumb */
-.breadcrumb ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-}
-.breadcrumb li {
-    text-decoration: none;
-}
-.breadcrumb li p {
-    margin-top: -.1rem;
-    font-size: 1.1rem;
-    padding-left: .2rem;
-}
-.breadcrumb a {
+/* logo and site name */
+.header a {
     text-decoration: none;
     color: var(--font-dark);
 }
-.breadcrumb a:hover {
+.header p:hover {
     border-bottom: var(--highlight-1) solid .2rem;
+    cursor: pointer;
+}
+.header p i {
+    padding-left: .2rem;
+    padding-right: .3rem;
+}
+/* social icons */
+.header-socials {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.4rem;
+    gap: .2rem;
+    padding-right: .2rem;
+}
+.header-socials a {
+    color: var(--font-dark);
 }
 /* nav */
 .nav {
@@ -94,7 +91,7 @@ nav a:hover {
     border-bottom: var(--highlight-1) solid .2rem;
     cursor: pointer;
 }
-/* flex direction row applies before column? could do */
+/* Make the items look bigger on side menu */
 .nav-active {
     right: 0;
     display: flex;
@@ -111,8 +108,11 @@ nav a:hover {
     top: 3.2rem;
   }
 /* hamburger button */
+/* MAKE THE BURGER GO FURTHER RIGHT! */
 .burger {
 	/* tweak */
+    display: flex;
+    justify-self: end;
 	padding-top: .6rem;
     padding-right: 1.4rem;
   } 
@@ -308,6 +308,9 @@ footer div .socials i {
     padding: 2rem;
     padding-bottom: 0;
     align-items: center;
+}
+.about-image {
+    width: 100%;
 }
 .about-text {
     background-color: var(--background-light);
