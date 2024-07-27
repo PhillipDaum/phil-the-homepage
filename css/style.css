@@ -47,6 +47,11 @@ body {
     height: 3rem;
 }
 /* logo and site name */
+.name-wrapper {
+    margin-left: .4rem;
+    padding-top: 1rem;
+    font-size: 1.2rem;
+}
 .header a {
     text-decoration: none;
     color: var(--font-dark);
@@ -63,12 +68,20 @@ body {
 .header-socials {
     display: flex;
     flex-direction: row;
-    font-size: 1.4rem;
-    gap: .2rem;
+    font-size: 1.8rem;
+    gap: .4rem;
     padding-right: .2rem;
+    padding-top: .6rem;
 }
 .header-socials a {
     color: var(--font-dark);
+}
+/* negates underline like other stuff */
+.header-socials p:hover {
+    border: none;
+}
+.header-socials a:hover {
+    color: var(--highlight-1);
 }
 /* nav */
 .nav {
@@ -219,6 +232,13 @@ section {
     align-items: center;
     padding-bottom: 1rem;
 }
+.contact-section h4 {
+    font-size: 1.4rem;
+    border-bottom: var(--highlight-1) solid .14rem;
+}
+.contact-section p {
+    font-family: var(--mono);
+}
 .button a {
     text-decoration: none;
     background-color: var(--highlight-2);
@@ -251,7 +271,11 @@ footer div .socials {
 }
 footer div .socials i {
     color: var(--footer-icon);
-} 
+}
+footer div .socials i:hover {
+    color: var(--highlight-1);
+}
+
 
 /* SUBMIT BUTTON - contact and javascript pages */
 .submit-button {
