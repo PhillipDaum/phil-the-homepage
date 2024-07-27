@@ -238,6 +238,7 @@ section {
 }
 .contact-section p {
     font-family: var(--mono);
+    padding: 1rem;
 }
 .button a {
     text-decoration: none;
