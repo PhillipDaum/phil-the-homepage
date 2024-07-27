@@ -6,14 +6,14 @@ import { getDatabase, ref, push, set } from "https://www.gstatic.com/firebasejs/
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyBMvAARHN_kPKbopz4cdQoPCd_-_oetN2A",
-    authDomain: "dev-portfolio-site-ae446.firebaseapp.com",
-    databaseURL: "https://dev-portfolio-site-ae446-default-rtdb.firebaseio.com",
-    projectId: "dev-portfolio-site-ae446",
-    storageBucket: "dev-portfolio-site-ae446.appspot.com",
-    messagingSenderId: "1017982875840",
-    appId: "1:1017982875840:web:2f2f3a507096f6791dd525",
-    measurementId: "G-2LR87GW5C4"
+    apiKey: process.env.FIREBASE_API_KEY,
+    authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+    databaseURL: process.env.FIREBASE_DATABASE_URL,
+    projectId: process.env.FIREBASE_PROJECT_ID,
+    storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.FIREBASE_APP_ID,
+    measurementId: process.env.FIREBASE_MEASUREMENT_ID
 };
 
 // Initialize Firebase
