@@ -1,3 +1,4 @@
 # things to ignore #
 ####################
 .vscode/
+config.js
