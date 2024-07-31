@@ -1,19 +1,18 @@
 // Firebase stuff, now I may need spam protection!!! lol. 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
 import { getDatabase, ref, push, set } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-database.js";
-// uncomment this out for local testing
-// import firebaseConfig from "./config.js";
 
+// exposed, figure out vercel or something later, does it need node?
 const firebaseConfig = {
-    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-    authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-    databaseURL: process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL,
-    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-    storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-    messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-    appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
-    measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
-};
+    apiKey: "AIzaSyDTpx8wyjxXrzeZcq0wW2Ifs8BQQ0TCYJs",
+    authDomain: "ac-portfolio-56568.firebaseapp.com",
+    databaseURL: "https://ac-portfolio-56568-default-rtdb.firebaseio.com",
+    projectId: "ac-portfolio-56568",
+    storageBucket: "ac-portfolio-56568.appspot.com",
+    messagingSenderId: "1032761574434",
+    appId: "1:1032761574434:web:c53345712a4c7525fef67b",
+    measurementId: "G-2E2PJ4MDJ5"
+  };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
