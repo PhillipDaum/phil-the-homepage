@@ -45,7 +45,7 @@
             <div class="contact-wrapper">
                 <h3>Send Me a Message</h3>
                 <div class="contact-form-wrapper">
-                    <form id="contactForm" action="#">
+                    <form id="contact-form" method="post" action="https://postmail.invotes.com/send">
                         <fieldset class="user-info">
                             <div class="name-and-email">
                                 <label for="name">Name</label>
@@ -53,15 +53,21 @@
                             </div>
                             <div class="name-and-email">
                                 <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required>
+                                <input type="email" id="email" name="reply_to" required>
                             </div>
                         </fieldset>
+                        <input type="hidden" name="access_token" value="9g68o5dt4kk4jv5ik1b157x3" />
+                        <!-- return urls can be fully qualified -OR-
+                           start with / for root relative -OR-
+                           start with . for url relative --> 
+                      <input type="hidden" name="success_url" value=".?message=Email+Successfully+Sent%21&isError=0" />
+                      <input type="hidden" name="error_url" value=".?message=Email+could+not+be+sent.&isError=1" />
                         <fieldset>
                             <legend for="comment">Comments</legend>
                             <textarea class="comment-area" name="comment" id="comment"></textarea>
                         </fieldset>
                         <fieldset>
-                            <input type="submit" value="Submit" class="submit-button">
+                            <input type="submit" value="Send" id="submit-button" class="submit-button">
                         </fieldset>
                     </form>
                 </div>
@@ -85,7 +91,7 @@
         </footer>
     </section>
     <script src="js/custom.js"></script>
-    <script src="js/contact.js" type="module"></script>
+    <script src="js/contact.js"></script>
 </body>
 
 </html>
