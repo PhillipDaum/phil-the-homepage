@@ -34,8 +34,7 @@
                 <li><a href="about.html">about</a></li>
                 <li><a href="javascript.html">javascript</a></li>
                 <li><a href="contact.html">contact</a></li>
-                <!-- ADD BETTER RESUME, defaults to browser pdf viewer -->
-                <li><a class="resume" target="_blank" href="assets/PhilDaumResume.pdf">resume</a></li>
+                <li><a class="resume" target="_blank" href="assets/Phil_Daum-resume.pdf">resume</a></li>
             </ul>
         </nav>
     </div>
@@ -45,34 +44,40 @@
             <div class="contact-wrapper">
                 <h3>Send Me a Message</h3>
                 <div class="contact-form-wrapper">
-                    <form id="contact-form" method="post" action="https://postmail.invotes.com/send">
+                    <form action="https://postmail.invotes.com/send" method="post" id="email_form">
                         <fieldset class="user-info">
                             <div class="name-and-email">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" name="name" minlength="1" maxlength="25" required>
+                                <label for="extra_name">Name</label>
+                                <input type="text" id="extra_name" name="extra_name" minlength="1" maxlength="25"
+                                    required>
                             </div>
                             <div class="name-and-email">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="reply_to" required>
+                                <label for="reply_to">Email</label>
+                                <input type="email" id="reply_to" name="reply_to" required>
                             </div>
                         </fieldset>
+
+                        <fieldset>
+                            <legend for="text">Comments</legend>
+                            <textarea class="comment-area" name="text" id="text"></textarea>
+                        </fieldset>
+                        <!-- hidden stuff that makes the form work -->
+                        <input type="hidden" name="subject" value="Contact form - Portfolio" />
                         <input type="hidden" name="access_token" value="9g68o5dt4kk4jv5ik1b157x3" />
-                        <!-- return urls can be fully qualified -OR-
-                           start with / for root relative -OR-
-                           start with . for url relative --> 
-                      <input type="hidden" name="success_url" value=".?message=Email+Successfully+Sent%21&isError=0" />
-                      <input type="hidden" name="error_url" value=".?message=Email+could+not+be+sent.&isError=1" />
+                        <input type="hidden" name="success_url"
+                            value=".?message=Email+Successfully+Sent%21&isError=0" />
+                        <input type="hidden" name="error_url" value=".?message=Email+could+not+be+sent.&isError=1" />
                         <fieldset>
-                            <legend for="comment">Comments</legend>
-                            <textarea class="comment-area" name="comment" id="comment"></textarea>
+                            <input id="submit_form" type="submit" value="Send" class="submit-button" />
                         </fieldset>
-                        <fieldset>
-                            <input type="submit" value="Send" id="submit-button" class="submit-button">
-                        </fieldset>
+                        <div class="advertising">
+                            <!-- I left this here because this service was fun and easy -->
+                            <p>Powered by <a href="https://postmail.invotes.com" target="_blank">PostMail</a></p>
+                        </div>
                     </form>
                 </div>
             </div>
-        </section>        
+        </section>
     </main>
     <!-- footer -->
     <section>
