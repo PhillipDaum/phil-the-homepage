@@ -1,6 +1,6 @@
 # My Portfolio Website
 
-Welcome to my portfolio website repository. This project showcases my work, including various web development projects and a contact form connected to Firebase.
+Welcome to my portfolio website repository. This project showcases my work, including various web development projects.
 
 ## Features
 - Responsive design
